@@ -9,13 +9,15 @@ function preload() {
 }
 
 function setup() {
-    cenario = new Cenario(imagemCenario, 50)
+    cenario = new Cenario(imagemCenario, 1)
     createCanvas(windowWidth, windowHeight);
     
 }
 
 function draw() {
-    image(imagemPersonagem, 0, height - 135, 110, 135, 0, 0, 220, 270) // (+) 1ª figurinha, dimensoes alt e larg
+    cenario.exibe()
+    cenario.move()
+    image(imagemPersonagem, 0, height - 135, 110, 135, 0, 0, 220, 270) 
     
 }
 
@@ -23,12 +25,19 @@ class Cenario {
     constructor(imagem, velocidade) {
         this.imagem = imagem
         this.velocidade = velocidade
+        this.x1 = 0
+        this.x2 = width
     }
 
     exibe() {
-        image(this.imagem, -this.velocidade, 0, width, height)
-        image(this.imagem, width-this.velocidade + 1, 0, width, height)
+        image(this.imagem, this.x1 -this.velocidade, 0, width, height)
+        image(this.imagem, this.x2 + 1, 0, width, height)
       
+    }
+
+    move() {
+        this.x1 -= this.velocidade
+        this.x2 -= this.velocidade
     }
 }
 
