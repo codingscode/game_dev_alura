@@ -9,9 +9,9 @@ function preload() {
 }
 
 function setup() {
+    createCanvas(windowWidth, windowHeight)
     cenario = new Cenario(imagemCenario, 2.5)
-    createCanvas(windowWidth, windowHeight);
-    
+        
 }
 
 function draw() {
@@ -41,6 +41,10 @@ class Cenario {
     
         if (this.x1 < -width) {
           this.x1 = width
+        }
+
+        if (this.x2 < -width) {
+          this.x2 = width
         }
     }
     
