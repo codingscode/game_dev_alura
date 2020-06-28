@@ -1,6 +1,7 @@
 
 let imagemCenario
 let imagemPersonagem
+let cenario
 
 function preload() {
   imagemCenario = loadImage('./imagens/cenario/floresta.png')
@@ -8,6 +9,7 @@ function preload() {
 }
 
 function setup() {
+    cenario = new Cenario(imagemCenario, 50)
     createCanvas(windowWidth, windowHeight);
     
 }
@@ -24,8 +26,8 @@ class Cenario {
     }
 
     exibe() {
-        image(this.imagemCenario, -50, 0, width, height)
-        image(this.imagemCenario, width-50, 0, width, height)
+        image(this.imagem, -this.velocidade, 0, width, height)
+        image(this.imagem, width-this.velocidade + 1, 0, width, height)
       
     }
 }
