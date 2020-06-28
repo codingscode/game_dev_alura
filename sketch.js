@@ -13,8 +13,8 @@ function setup() {
 }
 
 function draw() {
-    background(imagemCenario)
-    image(imagemPersonagem, 0, 0, 110, 135, 0, 0, 220, 270) // (+) 1ª figurinha, dimensoes alt e larg
+    image(imagemCenario, 0, 0, width, height)
+    image(imagemPersonagem, 0, height - 135, 110, 135, 0, 0, 220, 270) // (+) 1ª figurinha, dimensoes alt e larg
     
 
 }
