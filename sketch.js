@@ -9,7 +9,7 @@ function preload() {
 }
 
 function setup() {
-    cenario = new Cenario(imagemCenario, 1)
+    cenario = new Cenario(imagemCenario, 2.5)
     createCanvas(windowWidth, windowHeight);
     
 }
@@ -38,7 +38,12 @@ class Cenario {
     move() {
         this.x1 -= this.velocidade
         this.x2 -= this.velocidade
+    
+        if (this.x1 < 0) {
+          this.x1 = width
+        }
     }
+    
 }
 
 
