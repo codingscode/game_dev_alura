@@ -14,10 +14,8 @@ function setup() {
 
 function draw() {
     background(imagemCenario)
-    image(imagemPersonagem, 0, 0)
-    /* circle(mouseX, mouseY, 100) */
-    /* console.log('algo infinito...') */
-
+    image(imagemPersonagem, 0, 0, 110, 135, 0, 0, 220, 270) // (+) 1ª figurinha, dimensoes alt e larg
+    
 
 }
 
