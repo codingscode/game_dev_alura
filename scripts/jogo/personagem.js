@@ -19,7 +19,7 @@ class Personagem {
         this.frameAtual++
 
         if (this.frameAtual >= this.matriz.length - 1) {
-            this.frameAtual
+            this.frameAtual = 0
         }
     }
 }
