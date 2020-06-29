@@ -16,6 +16,7 @@ function setup() {
     createCanvas(windowWidth, windowHeight)
     cenario = new Cenario(imagemCenario, 2.5)
     personagem = new Personagem(imagemPersonagem)
+    frameRate(26)
     somDoJogo.loop() // quando a musica termina repete
 }
 
