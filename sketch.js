@@ -10,8 +10,8 @@ function preload() {
 
 function setup() {
     createCanvas(windowWidth, windowHeight)
-    cenario = new Cenario(imagemCenario, 2.5)
-        
+    cenario = new Cenario(imagemCenario, 3.5)
+    frameRate(38)    
 }
 
 function draw() {
