@@ -3,6 +3,7 @@ let imagemCenario
 let imagemPersonagem
 let cenario
 let somDoJogo
+let personagem
 
 
 function preload() {
@@ -14,6 +15,7 @@ function preload() {
 function setup() {
     createCanvas(windowWidth, windowHeight)
     cenario = new Cenario(imagemCenario, 2.5)
+    personagem = new Personagem(imagemPersonagem)
     somDoJogo.loop() // quando a musica termina repete
 }
 
@@ -21,7 +23,7 @@ function draw() {
     cenario.exibe()
     cenario.move()
     
-    
+    personagem.exibe()
 }
 
 
