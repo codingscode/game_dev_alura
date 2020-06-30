@@ -30,7 +30,7 @@ function setup() {
     createCanvas(windowWidth, windowHeight)
     cenario = new Cenario(imagemCenario, 2.5)
     personagem = new Personagem(imagemPersonagem)
-    inimigo = new Inimigo(matriz, imagem, x, largura, altura, larguraSprite, alturaSprite)
+    inimigo = new Inimigo(matrizInimigo, imagemInimigo, width - 52, 52, 52, 104, 104)
     frameRate(26)
     somDoJogo.loop() // quando a musica termina repete
 }
@@ -39,6 +39,8 @@ function draw() {
     cenario.exibe()
     cenario.move()
     
+    inimigo.exibe()
+
     personagem.exibe()
 }
 
