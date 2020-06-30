@@ -9,9 +9,7 @@ class Personagem {
        ]
        this.frameAtual= 0
     }
-    
-    
-
+        
     anima() {
         this.frameAtual++
 

@@ -3,15 +3,26 @@ class Animacao {
        this.matriz = matriz
        this.imagem = imagem
        this.x = x
+       this.y = height
        this.largura = largura
        this.altura = altura
-       this.larguraSprite = larguraSprite
-       this.alturaSprite = alturaSprite
+       this.larguraSprite = this.larguraSprite
+       this.alturaSprite = this.alturaSprite
+
+       this.frameAtual = 0
     }
 
     exibe() {
-        image(this.imagem, 0, height - 135, 110, 135, this.matriz[this.frameAtual][0], this.matriz[this.frameAtual][1], 
-               220, 270)  
+        image(this.imagem, this.x, this.y, this.largura, this.altura, this.matriz[this.frameAtual][0], this.matriz[this.frameAtual][1], 
+               this.larguraSprite, this.alturaSprite)  
         this.anima()
+    }
+
+    anima() {
+        this.frameAtual++
+
+        if (this.frameAtual >= this.matriz.length - 1) {
+            this.frameAtual = 0
+        }
     }
 }
