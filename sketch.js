@@ -40,6 +40,7 @@ function draw() {
     cenario.move()
     
     inimigo.exibe()
+    inimigo.move()
 
     personagem.exibe()
 }
