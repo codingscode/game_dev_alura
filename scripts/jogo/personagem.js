@@ -10,16 +10,17 @@ class Personagem extends Animacao {
     }
 
     pula() {
-        this.velocidadeDoPulo -= 50
+        console.log('pulei')
+        this.velocidadeDoPulo = -50
     }
 
     aplicaGravidade() {
         this.y += this.velocidadeDoPulo
         this.velocidadeDoPulo += this.gravidade
 
-        /* if (this.y > this.yInicial) {
+        if (this.y > this.yInicial) {
             this.y = this.yInicial
-        } */
+        }
     }
 
 }
