@@ -52,6 +52,7 @@ function draw() {
     cenario.move()
     
     personagem.exibe()
+    personagem.aplicaGravidade()
 
     inimigo.exibe()
     inimigo.move()
