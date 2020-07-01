@@ -28,9 +28,10 @@ class Personagem extends Animacao {
         noFill()
         rect(this.x, this.y, this.largura, this.altura)
         rect(inimigo.x, inimigo.y, inimigo.largura, inimigo.altura)
-        const colisao = collideRectRect(this.x, this.y, this.largura, this.altura, inimigo.x, inimigo.y, inimigo.largura, inimigo.altura)
+        const precisao = .73
+        const colisao = collideRectRect(this.x, this.y, this.largura*precisao, this.altura*precisao, inimigo.x, inimigo.y, inimigo.largura*precisao, inimigo.altura*precisao)
     
-        return false
+        return colisao
     }
 
 }
