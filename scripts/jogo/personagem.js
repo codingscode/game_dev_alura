@@ -11,6 +11,7 @@ class Personagem extends Animacao {
 
     pula() {
         console.log('pulei')
+        console.log(this.velocidadeDoPulo)
         this.velocidadeDoPulo = -50
     }
 
@@ -21,6 +22,12 @@ class Personagem extends Animacao {
         if (this.y > this.yInicial) {
             this.y = this.yInicial
         }
+    }
+
+    estaColidindo(inimigo) {
+        const colisao = collideRectRect(this.x, this.y, this.largura, this.altura, inimigo.x, inimigo.y, inimigo.largura, inimigo.altura)
+    
+        return colisao
     }
 
 }

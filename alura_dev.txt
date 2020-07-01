@@ -12,8 +12,9 @@ https://www.alura.com.br/imersao-gamedev-javascript/aula01-game-personagem-anima
 
 5P: https://www.alura.com.br/imersao-gamedev-javascript/aula05-vidas-e-mapas?utm_campaign=imersao_js_gamedev_aula_05&utm_medium=email&utm_source=RD+Station
 
+----------------------------
 
-
+https://github.com/bmoren/p5.collide2D
 
 
 
