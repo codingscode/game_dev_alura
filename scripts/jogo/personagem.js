@@ -5,5 +5,7 @@ class Personagem extends Animacao {
        this.frameAtual= 0
     }
 
-    
+    pula() {
+        this.y -= 50
+    }
 }

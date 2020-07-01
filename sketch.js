@@ -41,6 +41,12 @@ function setup() {
     somDoJogo.loop() // quando a musica termina repete
 }
 
+function keyPressed() {
+    if (key === 'ArrowUp') {
+      personagem.pula()  // faz subir
+    }
+}
+
 function draw() {
     cenario.exibe()
     cenario.move()
