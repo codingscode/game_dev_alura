@@ -7,6 +7,7 @@ let cenario
 let somDoJogo
 let personagem
 let inimigo
+let somPulo
 
 const matrizInimigo = [
         [0, 0],   [104,   0], [208,   0], [312,   0],
@@ -30,6 +31,7 @@ function preload() {
   imagemPersonagem = loadImage('./imagens/personagem/correndo.png')
   imagemInimigo = loadImage('./imagens/inimigos/gotinha.png')
   somDoJogo = loadSound('./sons/trilha_jogo.mp3')
+  somPulo = loadSound('./sons/somPulo.mp3')
 }
 
 function setup() {
@@ -44,6 +46,7 @@ function setup() {
 function keyPressed() {
     if (key === 'ArrowUp') {
       personagem.pula()  // faz subir
+      somPulo.play() // som do pulo
     }
 }
 
