@@ -11,6 +11,7 @@ let personagem
 let inimigo
 let inimigoTroll
 let inimigoGotinhaVoadora
+let pontuacao
 let somPulo
 
 const matrizInimigo = [
@@ -64,6 +65,8 @@ function preload() {
 function setup() {
     createCanvas(windowWidth, windowHeight)
     cenario = new Cenario(imagemCenario, 2.5)
+    pontuacao = new Pontuacao()
+
     personagem = new Personagem(matrizPersonagem, imagemPersonagem, 0, 30, 110, 135, 220, 270)
     const inimigo = new Inimigo(matrizInimigo, imagemInimigo, width - 52, 30, 52, 52, 104, 104, 10, 200)
     const inimigoGotinhaVoadora = new Inimigo(matrizGotinhaVoadora, imagemGotinhaVoadora, width - 52, 200, 100, 75, 200, 150, 10, 100)
@@ -87,6 +90,7 @@ function keyPressed() {
 function draw() {
     cenario.exibe()
     cenario.move()
+    pontuacao.exibe()
     
     personagem.exibe()
     personagem.aplicaGravidade()
@@ -106,7 +110,7 @@ function draw() {
      
         if (personagem.estaColidindo(inimigo)) {
             console.log('colidiu')
-            noLoop()
+            //noLoop()
         }
     })
 
