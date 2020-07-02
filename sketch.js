@@ -48,6 +48,8 @@ const matrizGotinhaVoadora = [
         [0, 750]
 ]
 
+const inimigos = []
+
 
 function preload() {
   imagemCenario = loadImage('./imagens/cenario/floresta.png')
@@ -63,9 +65,14 @@ function setup() {
     createCanvas(windowWidth, windowHeight)
     cenario = new Cenario(imagemCenario, 2.5)
     personagem = new Personagem(matrizPersonagem, imagemPersonagem, 0, 30, 110, 135, 220, 270)
-    inimigo = new Inimigo(matrizInimigo, imagemInimigo, width - 52, 30, 52, 52, 104, 104, 10, 200)
-    inimigoGotinhaVoadora = new Inimigo(matrizGotinhaVoadora, imagemGotinhaVoadora, width - 52, 200, 100, 75, 200, 150, 10, 100)
-    inimigoTroll = new Inimigo(matrizInimigoGrande, imagemInimigoTroll, width, 0, 200, 200, 400, 400, 10, 2500)
+    const inimigo = new Inimigo(matrizInimigo, imagemInimigo, width - 52, 30, 52, 52, 104, 104, 10, 200)
+    const inimigoGotinhaVoadora = new Inimigo(matrizGotinhaVoadora, imagemGotinhaVoadora, width - 52, 200, 100, 75, 200, 150, 10, 100)
+    const inimigoTroll = new Inimigo(matrizInimigoGrande, imagemInimigoTroll, width, 0, 200, 200, 400, 400, 10, 2500)
+    
+    inimigos.push(inimigo)
+    inimigos.push(inimigoGotinhaVoadora)
+    inimigos.push(inimigoTroll)
+
     frameRate(26)
     somDoJogo.loop() // quando a musica termina repete
 }
@@ -84,19 +91,30 @@ function draw() {
     personagem.exibe()
     personagem.aplicaGravidade()
 
-    inimigoTroll.exibe()
+    /* inimigoTroll.exibe()
     inimigoTroll.move()
     
     inimigoGotinhaVoadora.exibe()
     inimigoGotinhaVoadora.move()
 
     inimigo.exibe()
-    inimigo.move()
+    inimigo.move() */
     
-    if (personagem.estaColidindo(inimigo)) {
+    inimigos.forEach(inimigo => {
+        inimigo.exibe()
+        inimigo.move()
+     
+        if (personagem.estaColidindo(inimigo)) {
+            console.log('colidiu')
+            noLoop()
+        }
+    })
+
+    /* if (personagem.estaColidindo(inimigo)) {
        console.log('colidiu')
        noLoop()
-    }
+    } */
+
 }
 
 
