@@ -4,6 +4,7 @@ class Inimigo extends Animacao {
           
         this.velocidade = velocidade
         this.atraso = atraso
+        this.x = width + this.atraso
     }
 
     move() {

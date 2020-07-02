@@ -50,8 +50,8 @@ function setup() {
     createCanvas(windowWidth, windowHeight)
     cenario = new Cenario(imagemCenario, 2.5)
     personagem = new Personagem(matrizPersonagem, imagemPersonagem, 0, 30, 110, 135, 220, 270)
-    inimigo = new Inimigo(matrizInimigo, imagemInimigo, width - 52, 30, 52, 52, 104, 104, 8, 100)
-    inimigoTroll = new Inimigo(matrizInimigoGrande, imagemInimigoTroll, width, 0, 200, 200, 400, 400, 8, 500)
+    inimigo = new Inimigo(matrizInimigo, imagemInimigo, width - 52, 30, 52, 52, 104, 104, 8, width)
+    inimigoTroll = new Inimigo(matrizInimigoGrande, imagemInimigoTroll, width, 0, 200, 200, 400, 400, 8, width + 800)
     frameRate(26)
     somDoJogo.loop() // quando a musica termina repete
 }
