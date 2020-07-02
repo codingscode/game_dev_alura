@@ -51,7 +51,7 @@ function setup() {
     cenario = new Cenario(imagemCenario, 2.5)
     personagem = new Personagem(matrizPersonagem, imagemPersonagem, 0, 30, 110, 135, 220, 270)
     inimigo = new Inimigo(matrizInimigo, imagemInimigo, width - 52, 30, 52, 52, 104, 104)
-    inimigoTroll = new Inimigo(matriz, imagem, x, variacaoY, largura, altura, larguraSprite, alturaSprite)
+    inimigoTroll = new Inimigo(matrizInimigoGrande, imagemInimigoTroll, width, 0, 200, 200, 400, 400)
     frameRate(26)
     somDoJogo.loop() // quando a musica termina repete
 }
@@ -70,6 +70,8 @@ function draw() {
     personagem.exibe()
     personagem.aplicaGravidade()
 
+    inimigoTroll.exibe()
+    inimigoTroll.move()
     inimigo.exibe()
     inimigo.move()
     
