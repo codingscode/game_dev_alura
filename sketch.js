@@ -3,12 +3,14 @@ let imagemCenario
 let imagemPersonagem
 let imagemInimigo
 let imagemInimigoTroll
+let imagemGotinhaVoadora
 
 let cenario
 let somDoJogo
 let personagem
 let inimigo
 let inimigoTroll
+let inimigoGotinhaVoadora
 let somPulo
 
 const matrizInimigo = [
@@ -37,11 +39,22 @@ const matrizInimigoGrande = [
         [0, 2000], [400, 2000], [800, 2000]
 ]
 
+const matrizGotinhaVoadora = [
+        [0,   0], [200,   0], [400,   0],
+        [0, 150], [200, 150], [400, 150],
+        [0, 300], [200, 300], [400, 300],
+        [0, 450], [200, 450], [400, 450],
+        [0, 600], [200, 600], [400, 600],
+        [0, 750]
+]
+
+
 function preload() {
   imagemCenario = loadImage('./imagens/cenario/floresta.png')
   imagemPersonagem = loadImage('./imagens/personagem/correndo.png')
   imagemInimigo = loadImage('./imagens/inimigos/gotinha.png')
   imagemInimigoTroll = loadImage('./imagens/inimigos/troll.png')
+  imagemGotinhaVoadora = loadImage('./imagens/inimigos/gotinha-voadora.png')
   somDoJogo = loadSound('./sons/trilha_jogo.mp3')
   somPulo = loadSound('./sons/somPulo.mp3')
 }
@@ -50,8 +63,9 @@ function setup() {
     createCanvas(windowWidth, windowHeight)
     cenario = new Cenario(imagemCenario, 2.5)
     personagem = new Personagem(matrizPersonagem, imagemPersonagem, 0, 30, 110, 135, 220, 270)
-    inimigo = new Inimigo(matrizInimigo, imagemInimigo, width - 52, 30, 52, 52, 104, 104, 8, width)
-    inimigoTroll = new Inimigo(matrizInimigoGrande, imagemInimigoTroll, width, 0, 200, 200, 400, 400, 8, width + 800)
+    inimigo = new Inimigo(matrizInimigo, imagemInimigo, width - 52, 30, 52, 52, 104, 104, 10, 200)
+    inimigoGotinhaVoadora = new Inimigo(matrizGotinhaVoadora, imagemGotinhaVoadora, width - 52, 200, 100, 75, 200, 150, 10, 100)
+    inimigoTroll = new Inimigo(matrizInimigoGrande, imagemInimigoTroll, width, 0, 200, 200, 400, 400, 10, 2500)
     frameRate(26)
     somDoJogo.loop() // quando a musica termina repete
 }
@@ -72,6 +86,10 @@ function draw() {
 
     inimigoTroll.exibe()
     inimigoTroll.move()
+    
+    inimigoGotinhaVoadora.exibe()
+    inimigoGotinhaVoadora.move()
+
     inimigo.exibe()
     inimigo.move()
     
