@@ -91,18 +91,12 @@ function draw() {
     cenario.exibe()
     cenario.move()
     pontuacao.exibe()
+    pontuacao.adicionarPonto()
     
     personagem.exibe()
     personagem.aplicaGravidade()
 
-    /* inimigoTroll.exibe()
-    inimigoTroll.move()
     
-    inimigoGotinhaVoadora.exibe()
-    inimigoGotinhaVoadora.move()
-
-    inimigo.exibe()
-    inimigo.move() */
     
     inimigos.forEach(inimigo => {
         inimigo.exibe()
@@ -114,10 +108,7 @@ function draw() {
         }
     })
 
-    /* if (personagem.estaColidindo(inimigo)) {
-       console.log('colidiu')
-       noLoop()
-    } */
+    
 
 }
 
