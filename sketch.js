@@ -4,6 +4,7 @@ let imagemPersonagem
 let imagemInimigo
 let imagemInimigoTroll
 let imagemGotinhaVoadora
+let imagemFimdeJogo
 
 let cenario
 let somDoJogo
@@ -53,13 +54,14 @@ const inimigos = []
 
 
 function preload() {
-  imagemCenario = loadImage('./imagens/cenario/floresta.png')
-  imagemPersonagem = loadImage('./imagens/personagem/correndo.png')
-  imagemInimigo = loadImage('./imagens/inimigos/gotinha.png')
-  imagemInimigoTroll = loadImage('./imagens/inimigos/troll.png')
-  imagemGotinhaVoadora = loadImage('./imagens/inimigos/gotinha-voadora.png')
-  somDoJogo = loadSound('./sons/trilha_jogo.mp3')
-  somPulo = loadSound('./sons/somPulo.mp3')
+    imagemCenario = loadImage('./imagens/cenario/floresta.png')
+    imagemFimdeJogo = loadImage('./imagens/assets/game-over.png')
+    imagemPersonagem = loadImage('./imagens/personagem/correndo.png')
+    imagemInimigo = loadImage('./imagens/inimigos/gotinha.png')
+    imagemInimigoTroll = loadImage('./imagens/inimigos/troll.png')
+    imagemGotinhaVoadora = loadImage('./imagens/inimigos/gotinha-voadora.png')
+    somDoJogo = loadSound('./sons/trilha_jogo.mp3')
+    somPulo = loadSound('./sons/somPulo.mp3')
 }
 
 function setup() {
@@ -104,7 +106,9 @@ function draw() {
      
         if (personagem.estaColidindo(inimigo)) {
             console.log('colidiu')
-            //noLoop()
+
+            image(imagemFimdeJogo, width/2, height/2)
+            noLoop()
         }
     })
 
