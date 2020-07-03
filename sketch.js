@@ -107,7 +107,7 @@ function draw() {
         if (personagem.estaColidindo(inimigo)) {
             console.log('colidiu')
 
-            image(imagemFimdeJogo, width/2, height/2)
+            image(imagemFimdeJogo, width/2 - 210, height/3)
             noLoop()
         }
     })
