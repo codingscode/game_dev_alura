@@ -15,6 +15,7 @@ class Personagem extends Animacao {
     pula() {
         if (this.pulos < 3) {
             this.velocidadeDoPulo = this.alturaDoPulo
+            this.pulos++
         }
         console.log('pulei')
         console.log(this.velocidadeDoPulo)
