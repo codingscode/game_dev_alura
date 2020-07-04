@@ -21,10 +21,7 @@ function setup() {
 }
 
 function keyPressed() {
-    if (key === 'ArrowUp') {
-      personagem.pula()  // faz subir
-      somPulo.play() // som do pulo
-    }
+    jogo.keyPressed(key)
 }
 
 function draw() {

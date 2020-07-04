@@ -15,6 +15,14 @@ class Jogo {
         inimigos.push(inimigo)
         inimigos.push(inimigoGotinhaVoadora)
         inimigos.push(inimigoTroll)
+        
+    }
+
+    keyPressed(key) {
+        if (key === 'ArrowUp') {
+            personagem.pula()  // faz subir
+            somPulo.play() // som do pulo
+        }
     }
     
 }
