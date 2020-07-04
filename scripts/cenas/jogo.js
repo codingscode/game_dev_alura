@@ -24,5 +24,37 @@ class Jogo {
             somPulo.play() // som do pulo
         }
     }
+
+    draw() {
+        cenario.exibe()
+        cenario.move()
+        pontuacao.exibe()
+        pontuacao.adicionarPonto()
+        
+        personagem.exibe()
+        personagem.aplicaGravidade()
+
+        const inimigo = inimigos[inimigoAtual]
+        const inimigoVisivel = inimigo.x < -inimigo.largura
+        
+        inimigo.exibe()
+        inimigo.move()
+        if (inimigoVisivel) {
+            inimigoAtual++
+            if (inimigoAtual > 2) {
+                inimigoAtual = 0
+            }
+            inimigo.velocidade = parseInt(random(10, 20))
+        }
+        
+        if (personagem.estaColidindo(inimigo)) {
+            console.log('colidiu')
+
+            image(imagemFimdeJogo, width/2 - 210, height/3)
+            noLoop()
+        }
+    }
+
+    
     
 }
