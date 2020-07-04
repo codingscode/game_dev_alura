@@ -12,6 +12,7 @@ let personagem
 let inimigo
 let inimigoTroll
 let inimigoGotinhaVoadora
+let inimigoAtual = 0
 let pontuacao
 let somPulo
 
@@ -98,20 +99,24 @@ function draw() {
     personagem.exibe()
     personagem.aplicaGravidade()
 
+    const inimigo = inimigos[inimigoAtual]
+    const inimigoVisivel = inimigo.x < -inimigo.largura
     
-    
-    inimigos.forEach(inimigo => {
-        inimigo.exibe()
-        inimigo.move()
-     
-        if (personagem.estaColidindo(inimigo)) {
-            console.log('colidiu')
-
-            image(imagemFimdeJogo, width/2 - 210, height/3)
-            noLoop()
+    inimigo.exibe()
+    inimigo.move()
+    if (inimigoVisivel) {
+        inimigoAtual++
+        if (inimigoAtual > 2) {
+            inimigoAtual = 0
         }
-    })
+    }
+     
+    if (personagem.estaColidindo(inimigo)) {
+         console.log('colidiu')
 
+         image(imagemFimdeJogo, width/2 - 210, height/3)
+         noLoop()
+    }
     
 
 }
