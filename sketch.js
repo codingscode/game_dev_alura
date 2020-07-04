@@ -109,6 +109,7 @@ function draw() {
         if (inimigoAtual > 2) {
             inimigoAtual = 0
         }
+        inimigo.velocidade = parseInt(random(10, 20))
     }
      
     if (personagem.estaColidindo(inimigo)) {
