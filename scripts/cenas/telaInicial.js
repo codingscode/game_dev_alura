@@ -4,6 +4,7 @@ class TelaInicial {
     }
 
     draw() {
-       console.log('tela inicial')
+       //console.log('tela inicial')
+       image(imagemTelaInicial, 0, 0, width, height)
     }
 }
