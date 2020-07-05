@@ -4,6 +4,13 @@ let imagemInimigo
 let imagemInimigoTroll
 let imagemGotinhaVoadora
 let imagemFimdeJogo
+let imagemTelaInicial
+
+let fonteTelaInicial
+
+let cenaAtual = 'telaInicial'
+let cenas
+let telaInicial
 
 let cenario
 let somDoJogo
@@ -14,7 +21,7 @@ let inimigoGotinhaVoadora
 let pontuacao
 let somPulo
 
-let cenaAtual = 'telaInicial'
+
 
 const matrizInimigo = [
         [0, 0],   [104,   0], [208,   0], [312,   0],
