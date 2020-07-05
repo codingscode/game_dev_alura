@@ -11,7 +11,7 @@ let personagem
 let inimigo
 let inimigoTroll
 let inimigoGotinhaVoadora
-let inimigoAtual = 0
+/* let inimigoAtual = 0 */
 let pontuacao
 let somPulo
 
