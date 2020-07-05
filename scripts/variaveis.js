@@ -11,9 +11,10 @@ let personagem
 let inimigo
 let inimigoTroll
 let inimigoGotinhaVoadora
-/* let inimigoAtual = 0 */
 let pontuacao
 let somPulo
+
+let cenaAtual = 'telaInicial'
 
 const matrizInimigo = [
         [0, 0],   [104,   0], [208,   0], [312,   0],

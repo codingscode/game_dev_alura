@@ -18,6 +18,7 @@ function setup() {
     somDoJogo.loop() // quando a musica termina repete
     jogo = new Jogo()
     jogo.setup()
+    cenaAtual = 'jogo'
 }
 
 function keyPressed() {
@@ -25,8 +26,10 @@ function keyPressed() {
 }
 
 function draw() {
-    jogo.draw()
-
+    if (cenaAtual === 'jogo') {
+        jogo.draw()
+    }
+    
 }
 
 
