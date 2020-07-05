@@ -1,5 +1,4 @@
 
-
 function preload() {
     imagemCenario = loadImage('./imagens/cenario/floresta.png')
     imagemFimdeJogo = loadImage('./imagens/assets/game-over.png')
@@ -22,6 +21,7 @@ function setup() {
     telaInicial = new TelaInicial()
     jogo.setup()
     cenas = {jogo: jogo, telaInicial: telaInicial} // ou apenas {jogo, telaInicial} nome de propriedade se mesmo da variavel recebida
+    botaoGerenciador = new BotaoGerenciador('Iniciar Jogo', width/2 - 48, height*0.45)
 }
 
 function keyPressed() {
@@ -29,9 +29,6 @@ function keyPressed() {
 }
 
 function draw() {
-    /* if (cenaAtual === 'jogo') {
-        jogo.draw()
-    } */
     cenas[cenaAtual].draw()
 }
 

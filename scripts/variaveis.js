@@ -11,6 +11,7 @@ let fonteTelaInicial
 let cenaAtual = 'telaInicial'
 let cenas
 let telaInicial
+let botaoGerenciador
 
 let cenario
 let somDoJogo

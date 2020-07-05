@@ -6,6 +6,7 @@ class TelaInicial {
     draw() {
        this._imagemDeFundo()
        this._texto()
+       this._botao()
     }
 
     _imagemDeFundo() {
@@ -16,8 +17,14 @@ class TelaInicial {
         textSize(46)
         textFont(fonteTelaInicial)
         textAlign(CENTER)
-        text('As aventuras de', width/2, 140)
+        text('As aventuras de', width/2, height/4)
         textSize(85)
-        text('Hipsta', width/2, 215)
+        text('Hipsta', width/2, height/4 + 75)
+    }
+
+    _botao() {
+        botaoGerenciador.draw()
     }
 }
+
+
