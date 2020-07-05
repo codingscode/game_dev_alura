@@ -15,7 +15,9 @@ class TelaInicial {
     _texto() {
         textSize(46)
         textFont(fonteTelaInicial)
-        text('As aventuras de', width/3 + 50, 90)
-        text('Hipsta', width/3 + 120, 130)
+        textAlign(CENTER)
+        text('As aventuras de', width/2, 140)
+        textSize(85)
+        text('Hipsta', width/2, 215)
     }
 }
