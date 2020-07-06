@@ -8,6 +8,7 @@ class BotaoGerenciador {
  
     draw() {
        this.botao.position(this.x, this.y)
+       this.botao.mousePressed(() => cenaAtual = 'jogo')
     }
 
 }
