@@ -4,12 +4,18 @@ class BotaoGerenciador {
        this.x = x
        this.y = y
        this.botao = createButton(this.texto)
+       this.botao.mousePressed(() => this._alteraCena())
     }
  
     draw() {
        this.botao.position(this.x, this.y)
-       this.botao.mousePressed(() => cenaAtual = 'jogo')
+       
     }
+
+   _alteraCena() {
+      this.botao.remove()
+      cenaAtual = 'jogo'
+   }
 
 }
 
