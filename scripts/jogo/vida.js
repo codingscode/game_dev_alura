@@ -22,13 +22,13 @@ class Vida {
 
     ganhaVida() {
         if (this.vidas <= this.total) {
-           this.vida++
+           this.vidas++
         }
         
      }
      
     perdeVida() {
-        this.vida--
+        this.vidas--
     }
      
 }
