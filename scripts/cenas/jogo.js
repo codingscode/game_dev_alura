@@ -53,7 +53,8 @@ class Jogo {
             console.log('colidiu')
 
             image(imagemFimdeJogo, width/2 - 210, height/3)
-            noLoop()
+            vida.perdeVida()
+            //noLoop()
         }
     }
 

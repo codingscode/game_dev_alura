@@ -19,6 +19,17 @@ class Vida {
         }
         
     }
+
+    ganhaVida() {
+        if (this.vidas <= this.total) {
+           this.vida++
+        }
+        
+     }
+     
+    perdeVida() {
+        this.vida--
+    }
      
 }
 
