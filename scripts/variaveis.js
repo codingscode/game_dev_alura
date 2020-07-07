@@ -5,6 +5,7 @@ let imagemInimigoTroll
 let imagemGotinhaVoadora
 let imagemFimdeJogo
 let imagemTelaInicial
+let imagemVida
 
 let fonteTelaInicial
 
@@ -12,6 +13,7 @@ let cenaAtual = 'telaInicial'
 let cenas
 let telaInicial
 let botaoGerenciador
+let vida
 
 let cenario
 let somDoJogo

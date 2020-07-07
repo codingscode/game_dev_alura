@@ -6,6 +6,7 @@ class Jogo {
     setup() {
         cenario = new Cenario(imagemCenario, 2.5)
         pontuacao = new Pontuacao()
+        vida = new Vida(3, 3)
     
         personagem = new Personagem(matrizPersonagem, imagemPersonagem, 0, 30, 110, 135, 220, 270)
         const inimigo = new Inimigo(matrizInimigo, imagemInimigo, width - 52, 30, 52, 52, 104, 104, 10, 100)
@@ -28,6 +29,7 @@ class Jogo {
     draw() {
         cenario.exibe()
         cenario.move()
+        vida.draw()
         pontuacao.exibe()
         pontuacao.adicionarPonto()
         
