@@ -54,6 +54,7 @@ class Jogo {
 
             image(imagemFimdeJogo, width/2 - 210, height/3)
             vida.perdeVida()
+            personagem.tornarInvencivel()
             //noLoop()
         }
     }
