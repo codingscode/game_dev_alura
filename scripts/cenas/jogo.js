@@ -52,10 +52,14 @@ class Jogo {
         if (personagem.estaColidindo(inimigo)) {
             console.log('colidiu')
 
-            image(imagemFimdeJogo, width/2 - 210, height/3)
             vida.perdeVida()
             personagem.tornarInvencivel()
-            //noLoop()
+
+            if (vida.vidas === 0) {
+                image(imagemFimdeJogo, width/2 - 210, height/3)
+                noLoop()    
+            }
+            
         }
     }
 
