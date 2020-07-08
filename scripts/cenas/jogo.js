@@ -1,6 +1,12 @@
 class Jogo {
     constructor() {
-       this.inimigoAtual = 0
+       this.indice = 0
+       this.mapa = [
+            {inimigo: 0, velocidade: 19},
+            {inimigo: 1, velocidade: 14},
+            {inimigo: 1, velocidade: 30},
+            {inimigo: 2, velocidade: 20}
+       ]
     }
     
     setup() {
@@ -36,17 +42,20 @@ class Jogo {
         personagem.exibe()
         personagem.aplicaGravidade()
 
-        const inimigo = inimigos[this.inimigoAtual]
+        const linhaAtual = this.mapa[this.indice]
+        const inimigo = inimigos[linhaAtual.inimigo]
         const inimigoVisivel = inimigo.x < -inimigo.largura
         
+        inimigo.velocidade = linhaAtual.velocidade
+
         inimigo.exibe()
         inimigo.move()
         if (inimigoVisivel) {
-            this.inimigoAtual++
-            if (this.inimigoAtual > 2) {
-                this.inimigoAtual = 0
+            this.indice++
+            if (this.indice > this.mapa.length - 1) {
+                this.indice = 0
             }
-            inimigo.velocidade = parseInt(random(10, 20))
+            
         }
         
         if (personagem.estaColidindo(inimigo)) {
