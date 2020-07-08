@@ -1,12 +1,7 @@
 class Jogo {
     constructor() {
        this.indice = 0
-       this.mapa = [
-            {inimigo: 0, velocidade: 19},
-            {inimigo: 1, velocidade: 14},
-            {inimigo: 1, velocidade: 30},
-            {inimigo: 2, velocidade: 20}
-       ]
+       this.mapa = fita.mapa
     }
     
     setup() {

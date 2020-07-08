@@ -23,6 +23,8 @@ let inimigoTroll
 let inimigoGotinhaVoadora
 let pontuacao
 let somPulo
+let jogo
+let fita
 
 
 
