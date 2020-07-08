@@ -50,8 +50,11 @@ class Jogo {
 
         inimigo.exibe()
         inimigo.move()
+
         if (inimigoVisivel) {
             this.indice++
+            inimigo.aparece()
+
             if (this.indice > this.mapa.length - 1) {
                 this.indice = 0
             }
